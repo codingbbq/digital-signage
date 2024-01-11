@@ -1,25 +1,32 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+"use client";
+import type { Metadata } from "next";
+import "@/public/globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { usePathname } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: 'Digital Signage',
-  description: 'Digital Signage Web Application',
-}
+const metadata: Metadata = {
+	title: "Digital Signage",
+	description: "Digital Signage Web Application",
+};
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  )
+	const paths = ["/login", "/view"];
+	const pathname = usePathname();
+	console.log(pathname);
+	const useComponent = !paths.some((suffix) => pathname.endsWith(suffix));
+
+	return (
+		<html lang="en">
+			<body>
+				{useComponent && <Navbar />}
+				  {children}
+				{useComponent && <Footer />}
+			</body>
+		</html>
+	);
 }

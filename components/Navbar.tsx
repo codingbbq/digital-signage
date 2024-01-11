@@ -2,20 +2,22 @@
 import Image from "next/image";
 import logo from "../public/images/digital_signage_logo.svg";
 import Link from "next/link";
-import { navLinks } from "@/app/constants/nav";
+import { navLinks } from "@/app/_constants/nav";
 import { usePathname } from "next/navigation";
 const Navbar = () => {
     const pathname = usePathname();
+
     const navclass = {
         activeClass : "block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500",
         normalClass : "block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
     };
+
 	return (
 		<>
 			<nav className="bg-white border-gray-200 dark:bg-gray-900">
 				<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-					<a
-						href="https://flowbite.com/"
+					<Link
+						href="/"
 						className="flex items-center space-x-3 rtl:space-x-reverse"
 					>
 						<Image
@@ -27,7 +29,7 @@ const Navbar = () => {
 						<span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
 							Digital Signage
 						</span>
-					</a>
+					</Link>
 					<button
 						data-collapse-toggle="navbar-default"
 						type="button"

@@ -4,7 +4,11 @@ export const navLinks = [
         href: "/"
     },
     {
+        name: "Login",
+        href: "/login"
+    },
+    {
         name: "Dashboard",
         href: "/dashboard"
     }
-]
+];

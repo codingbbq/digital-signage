@@ -47,7 +47,7 @@ const Weather = () => {
 					</div>
 					<span className="font-bold text-8xl">14°</span>
 				</div>
-				<div className="flex justify-between mt-8 space-x-4 text-gray-600">
+				<div className="flex justify-between mt-6 px-4 space-x-4 text-gray-600">
 					<div className="flex flex-col items-center space-y-1">
 						<span className="uppercase">wed</span>
 						<svg

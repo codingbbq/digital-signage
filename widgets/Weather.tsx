@@ -1,7 +1,7 @@
 const Weather = () => {
 	return (
 		<section>
-			<div className="max-w-md p-4 mx-auto mt-4 rounded-lg bg-slate-100 text-gray-800 border shadow-md">
+			<div className="max-w-md p-4 mx-auto rounded-lg bg-slate-100 text-gray-800 border shadow-md">
 				<div className="flex justify-between space-x-8">
 					<div className="flex flex-col items-center">
 						<svg

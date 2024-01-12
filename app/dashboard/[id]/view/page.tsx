@@ -9,7 +9,7 @@ const DashboardViewPage = () => {
 	return (
 		<main>
 			<div className="flex flex-col h-screen">
-				<section className="flex flex-col mx-8 my-2 justify-between md:flex-row">
+				<section className="flex flex-col mx-8 my-2 items-center justify-between md:flex-row">
 					<h1 className="text-4xl font-bold">
 						Karbala - Updates
 					</h1>
@@ -27,7 +27,7 @@ const DashboardViewPage = () => {
 
 					<div className="md:w-2/3 flex flex-col md:order-2 order-1">
 						<div>
-							<h3 className="text-2xl font-bold text-gray-700 px-4 pt-2">
+							<h3 className="text-2xl font-bold text-gray-700 px-4">
 								Updates
 							</h3>
 							<div

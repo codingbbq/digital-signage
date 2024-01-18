@@ -15,7 +15,7 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const paths = ["/login", "/view"];
+	const paths = ["/login", "/view", "/slideshow"];
 	const pathname = usePathname();
 	console.log(pathname);
 	const useComponent = !paths.some((suffix) => pathname.endsWith(suffix));

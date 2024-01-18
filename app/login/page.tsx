@@ -106,8 +106,4 @@ const LoginPage = () => {
 	);
 };
 
-LoginPage.getLayout = function getLayout(page: ReactNode) {
-	return <>{page}</>; // Return only the page, without the layout
-};
-
 export default LoginPage;
